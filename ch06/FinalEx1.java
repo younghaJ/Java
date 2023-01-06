@@ -12,20 +12,20 @@ final class Final1{
 class Final3{
 	
 	final int KIA = 1;
-	final int SK;
+	//final int SK;
 	int k;
 	
-	public Final3() {
+	//public Final3() {
 		//KIA = 2;
-		System.out.println(k);
-	}
+	//	System.out.println(k);
+	//}
 	
 	public void prn(final int a) {
 		//a = 10;
 		final int b = 10; //지역변수
 		//b=20;
 		int c;
-		System.out.println(c);
+		//System.out.println(c);
 	}
 }
 
@@ -39,10 +39,10 @@ class Final4{
 }
 
 class Final5 extends Final4{
-	@Override
-	void prn1() {}
-	@Override
-	void prn1() {}
+	//@Override
+	//void prn1() {}
+	//@Override
+	//void prn1() {}
 }
 public class FinalEx1 {
 	public static void main(String[] args) {

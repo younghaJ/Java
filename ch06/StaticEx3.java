@@ -1,6 +1,9 @@
 package ch06;
 
+import common.util.StringUtil;
+
 class Static3{
+	//static 필드는 동일한 클래스의 모든 객체가 공유의 목적으로 하나만 메모리에 만들어진다
 	static int a;
 	int b;
 	
@@ -18,5 +21,8 @@ public class StaticEx3 {
 		st2.a = 20;
 		System.out.println(st1.a);
 		System.out.println(st2.a);
+		
+		String str = "1000000000000000";
+		System.out.println(StringUtil.addComma(str));
 	}
 }
