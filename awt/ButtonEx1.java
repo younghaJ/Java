@@ -1,0 +1,18 @@
+package awt;
+
+import java.awt.Button;
+
+import ch09.MFrame;
+
+public class ButtonEx1 extends MFrame{
+	Button btn[] = new Button[4];
+	String label[] = {"추가", "삭제", "전체삭제", "종료"};
+	
+	public ButtonEx1() {
+		super(250, 250);
+		setTitle("Button Example");
+		for (int i = 0; i < label.length; i++) {
+			add(btn[i] = new Button(label[i]));
+		}
+	}
+}
