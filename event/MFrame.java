@@ -1,8 +1,7 @@
-package awt;
+package event;
 
 import java.awt.BorderLayout;
 import java.awt.Color;
-import java.awt.FlowLayout;
 import java.awt.Frame;
 import java.awt.event.WindowAdapter;
 import java.awt.event.WindowEvent;
@@ -28,7 +27,6 @@ public class MFrame extends Frame{
 	public MFrame(int w, int h, Color c, boolean flag) {
 		setSize(w, h);
 		//setLayout(new FlowLayout());
-		setLayout(new BorderLayout());
 		setBackground(c);
 		addWindowListener(new WindowAdapter() {
 			@Override
