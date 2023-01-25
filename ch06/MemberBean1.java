@@ -1,13 +1,14 @@
-package Member;
+package ch06;
 
-public class MemberBean {
 
+
+public class MemberBean1 {
+	
 	private int id;
 	private String name;
 	private String phone;
 	private String address;
 	private String team;
-	
 	public int getId() {
 		return id;
 	}
@@ -38,6 +39,6 @@ public class MemberBean {
 	public void setTeam(String team) {
 		this.team = team;
 	}
-	
-	
+
+
 }

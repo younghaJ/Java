@@ -1,4 +1,4 @@
-package member;
+package Member;
 
 import java.awt.BorderLayout;
 import java.awt.Color;
@@ -24,13 +24,15 @@ implements ActionListener{
 	List list;
 	TextField tf;
 	JPanel p1,p2;
-	memberMgr mgr;
+	MemberMgr mgr;
 	DialogBox err;
+	MemberAWT awt;
 	
-	public ZipcodeFrame() {
+	public ZipcodeFrame(MemberAWT awt) {
 		super(300,500);
+		this.awt = awt;
 		setTitle("ZipcodeFrame");
-		mgr = new memberMgr();
+		mgr = new MemberMgr();
 		p1=new JPanel();
 		p1.setBackground(Color.LIGHT_GRAY);
 		p1.add(label = new JLabel ("주소 : ",label.CENTER));
@@ -72,19 +74,20 @@ implements ActionListener{
 				for (int i = 0; i < vlist.size(); i++) {
 					ZipcodeBean bean = vlist.get(i);
 					String str = bean.getZipcode();
-					str += bean.getArea1() + " ";
-					str += bean.getArea2() + " ";
-					str += bean.getArea3() + " ";
+					str += bean.getArea1().trim() + " ";
+					str += bean.getArea2().trim() + " ";
+					str += bean.getArea3().trim() + " ";
 					list.add(str);
 				}
 			}
-		}else if(obj==list) {
+		}else if(obj==list|| obj==selectBtn) {
 			//더블클릭하면 호출한 Frame으로 주소 전달
+			String add = list.getSelectedItem();
+			awt.tf4.setText(add);
+			list.removeAll();
+			dispose();
 		}
 		
 	}
-	
-	public static void main(String[] args) {
-		new ZipcodeFrame();
-	}
+
 }

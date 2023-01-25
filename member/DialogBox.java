@@ -1,4 +1,4 @@
-package member;
+package Member;
 
 import java.awt.BorderLayout;
 import java.awt.FlowLayout;
@@ -20,14 +20,14 @@ class DialogBox extends JDialog implements ActionListener {
         super(cp, true);
         this.cp = cp;
         setTitle(title);
-        // ë©”ì‹œì§€ ì¶œë ¥
+        // ë©”ì‹œì§? ì¶œë ¥
         add(new JLabel(name, JLabel.CENTER));
         
         JPanel pan = new JPanel();
         pan.setLayout(new FlowLayout());
         add(pan, BorderLayout.SOUTH);
 
-        b1 = new JButton("í™•ì¸");
+        b1 = new JButton("?™•?¸");
         pan.add(b1);
         b1.addActionListener(this);
         	
@@ -36,7 +36,7 @@ class DialogBox extends JDialog implements ActionListener {
         setVisible(true);
     }
 
-    // ë‹¤ì´ì–¼ë¡œê·¸ ìœ„ì˜ ë²„íŠ¼ì„ í´ë¦­í–ˆì„ ë•Œ
+    // ?‹¤?´?–¼ë¡œê·¸ ?œ„?˜ ë²„íŠ¼?„ ?´ë¦??–ˆ?„ ?•Œ
     public void actionPerformed(ActionEvent evt) {
         dispose();
     }

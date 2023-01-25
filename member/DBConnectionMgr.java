@@ -1,4 +1,4 @@
-package member;
+package Member;
 
 /**
  * Copyright(c) 2001 iSavvix Corporation (http://www.isavvix.com/)
