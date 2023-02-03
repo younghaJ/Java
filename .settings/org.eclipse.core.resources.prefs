@@ -4,3 +4,4 @@ encoding/<project>=MS949
 encoding/Graphics=MS949
 encoding/awt=MS949
 encoding/event=MS949
+encoding/net=MS949
