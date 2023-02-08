@@ -1,4 +1,4 @@
-package net;
+package hw;
 
 import java.awt.Button;
 import java.awt.Color;
@@ -15,7 +15,7 @@ import java.net.Socket;
 
 import javax.swing.JFrame;
 
-class LoginAWT3 extends JFrame implements ActionListener {
+class TalkAWT extends JFrame implements ActionListener {
 
 	TextField idTf, pwTf;
 	Label logo, idl, pwl, msgl;
@@ -26,12 +26,12 @@ class LoginAWT3 extends JFrame implements ActionListener {
 	String id;
 	String host = "127.0.0.1";
 	int port = 8003;
-	String title = "MyChat3.0";
+	String title = "MyChat1.0";
 	String label[] = { "ID와 PWD를 입력하세요.", "ID와 PWD를 확인하세요.", "이중 접속입니다." };
 
-	public LoginAWT3() {
+	public TalkAWT() {
 		setSize(450, 400);
-		getContentPane().setBackground(new Color(100, 200, 100));
+		getContentPane().setBackground(new Color(200, 0, 200));
 		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 		setLayout(null);
 		setTitle(title);
@@ -90,7 +90,7 @@ class LoginAWT3 extends JFrame implements ActionListener {
 					}else if(data.equals("T")) {
 						//msgl.setText("로그인 성공");
 						dispose();//LoginAWT 사라지고
-						new ChatClient3(in, out, id);
+						new ChatClient1(in, out, id);
 					}//--if3
 				}//--if2
 			}//--if1
@@ -110,6 +110,6 @@ class LoginAWT3 extends JFrame implements ActionListener {
 	}// --connect
 
 	public static void main(String[] args) {
-		new LoginAWT3();
+		new TalkAWT();
 	}
 }
